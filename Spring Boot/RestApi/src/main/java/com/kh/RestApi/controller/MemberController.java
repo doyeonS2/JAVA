@@ -1,13 +1,12 @@
 package com.kh.RestApi.controller;
-//import com.kh.RestApi.dao.MemberDAO;
 import com.kh.RestApi.service.MemberService;
 import com.kh.RestApi.vo.MemberVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +15,7 @@ import java.util.Map;
 @RestController
 public class MemberController {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass().getSimpleName()); // 로그 찍을 때 sout 대신 이걸로 쓰기!
+    // service 로직 연결
     private MemberService memberService;
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
@@ -66,6 +66,5 @@ public class MemberController {
 
         Map<String, String> map = new HashMap<>();
             return new ResponseEntity(map, HttpStatus.OK);
-
     }
 }

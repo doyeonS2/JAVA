@@ -60,3 +60,34 @@
 [2022-11-17 10:28:23.913] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
 [2022-11-17 10:28:23.915] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
 [2022-11-17 10:28:23.923] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-11-17 10:42:49.576] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Starting RestApiApplication using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 28016 (D:\김도연\Java\RestApi\target\classes started by user1 in D:\김도연\Java\RestApi)
+[2022-11-17 10:42:49.577] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication No active profile set, falling back to 1 default profile: "default"
+[2022-11-17 10:42:49.621] [INFO ] [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls The Class-Path manifest attribute in C:\Users\user1\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user1/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
+[2022-11-17 10:42:49.621] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2022-11-17 10:42:49.622] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2022-11-17 10:42:50.237] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-17 10:42:50.289] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+[2022-11-17 10:42:50.959] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8111 (http)
+[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8111"]
+[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.68]
+[2022-11-17 10:42:51.072] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
+[2022-11-17 10:42:51.072] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1450 ms
+[2022-11-17 10:42:51.307] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-17 10:42:51.349] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-17 10:42:51.482] [INFO ] [restartedMain] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-17 10:42:51.568] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-11-17 10:42:51.576] [WARN ] [restartedMain] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+[2022-11-17 10:42:51.774] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-11-17 10:42:51.801] [INFO ] [restartedMain] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[2022-11-17 10:42:52.777] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-17 10:42:52.783] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-17 10:42:53.217] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-17 10:42:53.432] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2022-11-17 10:42:53.496] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
+[2022-11-17 10:42:53.507] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8111"]
+[2022-11-17 10:42:53.521] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8111 (http) with context path ''
+[2022-11-17 10:42:53.529] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Started RestApiApplication in 4.389 seconds (JVM running for 4.976)
+[2022-11-17 12:15:15.384] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-17 12:15:15.399] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-11-17 12:15:15.408] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
