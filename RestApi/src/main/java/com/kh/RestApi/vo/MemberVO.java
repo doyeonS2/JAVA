@@ -10,5 +10,5 @@ public class MemberVO {
     private String pwd;
     private String name;
     private String email;
-    private Date join;
+    private String grade;
 }

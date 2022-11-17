@@ -1,5 +1,6 @@
 package com.kh.RestApi.controller;
-import com.kh.RestApi.dao.MemberDAO;
+//import com.kh.RestApi.dao.MemberDAO;
+import com.kh.RestApi.service.MemberService;
 import com.kh.RestApi.vo.MemberVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,18 +16,18 @@ import java.util.Map;
 @RestController
 public class MemberController {
     private final Logger LOGGER = LoggerFactory.getLogger(this.getClass().getSimpleName()); // 로그 찍을 때 sout 대신 이걸로 쓰기!
-
-    @GetMapping("/GetMemberParam")
-    public ResponseEntity <List<MemberVO>> memberList(@RequestParam String cmd) {
-        if(cmd.equals("MemberList")) {
-            MemberDAO dao = new MemberDAO();
-            List<MemberVO> list = dao.memberSelect();
-            return new ResponseEntity<>(list, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
-        }
+    private MemberService memberService;
+    public MemberController(MemberService memberService) {
+        this.memberService = memberService;
     }
 
+    @GetMapping("/GetMemberParam")
+    public ResponseEntity <List<MemberVO>> memberList(@RequestParam String id) {
+        LOGGER.info("회원 조회 아이디 : " + id);
+        List<MemberVO> list = memberService.getMemberList(id);
+
+            return new ResponseEntity<>(list, HttpStatus.OK);
+    }
     @PostMapping("/Login")
     public Map<String, String> memberLogin(@RequestBody Map<String, String> loginData) {
         String getId = loginData.get("id");
@@ -38,26 +39,19 @@ public class MemberController {
         LOGGER.debug("Login Controller Call !!!!");
         LOGGER.trace("Login Controller Call !!!!");
 
-        MemberDAO dao = new MemberDAO();
-        boolean isReg = dao.loginCheck(getId, getPwd);
+//        MemberDAO dao = new MemberDAO();
+//        boolean isReg = dao.loginCheck(getId, getPwd);
         Map<String, String> map = new HashMap<>();
-        if(isReg) map.put("result", "OK");
-        else map.put("result", "NOK");
+//        if(isReg) map.put("result", "OK");
+//        else map.put("result", "NOK");
         return map;
     }
     @PostMapping("MemberCheck")
     public ResponseEntity<Map<String, String>> memberCheck(@RequestBody Map<String, String> chkData) {
         String getId = chkData.get("id");
-        MemberDAO dao = new MemberDAO();
-        boolean isTrue = dao.regMemberCheck(getId);
+
         Map<String, String> map = new HashMap<>();
-        if(isTrue) {
-            map.put("result", "OK");
             return new ResponseEntity(map, HttpStatus.OK);
-        } else {
-            map.put("result", "NOK");
-            return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
-        }
     }
 
     // 조회 -> GET 방식
@@ -69,15 +63,9 @@ public class MemberController {
         String getPwd = regData.get("pwd");
         String getName = regData.get("name");
         String getMail = regData.get("mail");
-        MemberDAO dao = new MemberDAO();
-        boolean isTrue = dao.memberRegister(getId, getPwd, getName, getMail);
+
         Map<String, String> map = new HashMap<>();
-        if(isTrue) {
-            map.put("result", "OK");
             return new ResponseEntity(map, HttpStatus.OK);
-        } else {
-            map.put("result", "NOK");
-            return new ResponseEntity<>(map, HttpStatus.BAD_REQUEST);
-        }
+
     }
 }

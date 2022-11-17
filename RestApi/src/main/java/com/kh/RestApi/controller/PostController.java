@@ -1,5 +1,5 @@
 package com.kh.RestApi.controller;
-import com.kh.RestApi.dao.MemberDAO;
+//import com.kh.RestApi.dao.MemberDAO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -31,8 +31,7 @@ public class PostController {
     public ResponseEntity<Map<String, String>> memberLogin(@RequestBody Map<String, String> postData) {
         String getId = postData.get("id");
         String getPwd = postData.get("pwd");
-        MemberDAO dao = new MemberDAO();
-        boolean isTrue = dao.loginCheck(getId, getPwd);
+
         Map<String, String> map = new HashMap<>();
         map.put("result", "OK");
         return new ResponseEntity(map, HttpStatus.OK);
