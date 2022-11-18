@@ -32,6 +32,7 @@ class ItemRepositoryTest {
             item.setRegTime(LocalDateTime.now());
             item.setUpdateTime(LocalDateTime.now());
             itemRepository.save(item);
+            log.warn(item.toString());
         }
     }
     @Test

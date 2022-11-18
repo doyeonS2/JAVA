@@ -1,93 +1,67 @@
-[2022-11-17 09:24:44.408] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Starting RestApiApplication using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 22712 (D:\김도연\Java\RestApi\target\classes started by user1 in D:\김도연\Java\RestApi)
-[2022-11-17 09:24:44.421] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication No active profile set, falling back to 1 default profile: "default"
-[2022-11-17 09:24:44.492] [INFO ] [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls The Class-Path manifest attribute in C:\Users\user1\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user1/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
-[2022-11-17 09:24:44.493] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2022-11-17 09:24:44.493] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2022-11-17 09:24:45.071] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2022-11-17 09:24:45.116] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
-[2022-11-17 09:24:45.961] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8111 (http)
-[2022-11-17 09:24:45.971] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8111"]
-[2022-11-17 09:24:45.971] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
-[2022-11-17 09:24:45.971] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.68]
-[2022-11-17 09:24:46.064] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-[2022-11-17 09:24:46.065] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1571 ms
-[2022-11-17 09:24:46.321] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
-[2022-11-17 09:24:46.366] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
-[2022-11-17 09:24:46.532] [INFO ] [restartedMain] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[2022-11-17 09:24:46.696] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-[2022-11-17 09:24:46.705] [WARN ] [restartedMain] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-[2022-11-17 09:24:47.576] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-[2022-11-17 09:24:47.618] [INFO ] [restartedMain] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
-[2022-11-17 09:24:49.039] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[2022-11-17 09:24:49.045] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 09:24:50.126] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2022-11-17 09:24:50.606] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-[2022-11-17 09:24:50.705] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
-[2022-11-17 09:24:50.716] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8111"]
-[2022-11-17 09:24:50.732] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8111 (http) with context path ''
-[2022-11-17 09:24:50.753] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Started RestApiApplication in 6.937 seconds (JVM running for 7.672)
-[2022-11-17 10:11:37.670] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 10:11:37.673] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-[2022-11-17 10:11:37.680] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
-[2022-11-17 10:21:45.284] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Starting RestApiApplication using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 28576 (D:\김도연\Java\RestApi\target\classes started by user1 in D:\김도연\Java\RestApi)
-[2022-11-17 10:21:45.285] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication No active profile set, falling back to 1 default profile: "default"
-[2022-11-17 10:21:45.329] [INFO ] [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls The Class-Path manifest attribute in C:\Users\user1\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user1/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
-[2022-11-17 10:21:45.330] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2022-11-17 10:21:45.331] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2022-11-17 10:21:45.911] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2022-11-17 10:21:45.962] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
-[2022-11-17 10:21:46.607] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8111 (http)
-[2022-11-17 10:21:46.618] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8111"]
-[2022-11-17 10:21:46.618] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
-[2022-11-17 10:21:46.618] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.68]
-[2022-11-17 10:21:46.711] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-[2022-11-17 10:21:46.711] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1380 ms
-[2022-11-17 10:21:46.935] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
-[2022-11-17 10:21:46.978] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
-[2022-11-17 10:21:47.114] [INFO ] [restartedMain] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[2022-11-17 10:21:47.200] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-[2022-11-17 10:21:47.207] [WARN ] [restartedMain] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-[2022-11-17 10:21:47.415] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-[2022-11-17 10:21:47.441] [INFO ] [restartedMain] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
-[2022-11-17 10:21:48.432] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[2022-11-17 10:21:48.439] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 10:21:48.863] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2022-11-17 10:21:49.076] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-[2022-11-17 10:21:49.141] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
-[2022-11-17 10:21:49.149] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8111"]
-[2022-11-17 10:21:49.164] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8111 (http) with context path ''
-[2022-11-17 10:21:49.171] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Started RestApiApplication in 4.336 seconds (JVM running for 4.875)
-[2022-11-17 10:28:23.913] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 10:28:23.915] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-[2022-11-17 10:28:23.923] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
-[2022-11-17 10:42:49.576] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Starting RestApiApplication using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 28016 (D:\김도연\Java\RestApi\target\classes started by user1 in D:\김도연\Java\RestApi)
-[2022-11-17 10:42:49.577] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication No active profile set, falling back to 1 default profile: "default"
-[2022-11-17 10:42:49.621] [INFO ] [restartedMain] org.springframework.boot.devtools.restart.ChangeableUrls The Class-Path manifest attribute in C:\Users\user1\.m2\repository\com\oracle\database\jdbc\ojdbc8\21.5.0.0\ojdbc8-21.5.0.0.jar referenced one or more files that do not exist: file:/C:/Users/user1/.m2/repository/com/oracle/database/jdbc/ojdbc8/21.5.0.0/oraclepki.jar
-[2022-11-17 10:42:49.621] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2022-11-17 10:42:49.622] [INFO ] [restartedMain] org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2022-11-17 10:42:50.237] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[2022-11-17 10:42:50.289] [INFO ] [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
-[2022-11-17 10:42:50.959] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 8111 (http)
-[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Initializing ProtocolHandler ["http-nio-8111"]
-[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.catalina.core.StandardService Starting service [Tomcat]
-[2022-11-17 10:42:50.969] [INFO ] [restartedMain] org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.68]
-[2022-11-17 10:42:51.072] [INFO ] [restartedMain] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Initializing Spring embedded WebApplicationContext
-[2022-11-17 10:42:51.072] [INFO ] [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1450 ms
-[2022-11-17 10:42:51.307] [INFO ] [restartedMain] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
-[2022-11-17 10:42:51.349] [INFO ] [restartedMain] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
-[2022-11-17 10:42:51.482] [INFO ] [restartedMain] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[2022-11-17 10:42:51.568] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
-[2022-11-17 10:42:51.576] [WARN ] [restartedMain] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
-[2022-11-17 10:42:51.774] [INFO ] [restartedMain] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
-[2022-11-17 10:42:51.801] [INFO ] [restartedMain] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
-[2022-11-17 10:42:52.777] [INFO ] [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[2022-11-17 10:42:52.783] [INFO ] [restartedMain] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 10:42:53.217] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[2022-11-17 10:42:53.432] [WARN ] [restartedMain] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
-[2022-11-17 10:42:53.496] [INFO ] [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer LiveReload server is running on port 35729
-[2022-11-17 10:42:53.507] [INFO ] [restartedMain] org.apache.coyote.http11.Http11NioProtocol Starting ProtocolHandler ["http-nio-8111"]
-[2022-11-17 10:42:53.521] [INFO ] [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 8111 (http) with context path ''
-[2022-11-17 10:42:53.529] [INFO ] [restartedMain] com.kh.RestApi.RestApiApplication Started RestApiApplication in 4.389 seconds (JVM running for 4.976)
-[2022-11-17 12:15:15.384] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
-[2022-11-17 12:15:15.399] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
-[2022-11-17 12:15:15.408] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-11-18 09:35:35.280] [INFO ] [main] com.kh.RestApi.RestApiApplicationTests Starting RestApiApplicationTests using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 22368 (started by user1 in D:\김도연\Java\Spring Boot\RestApi)
+[2022-11-18 09:35:35.287] [INFO ] [main] com.kh.RestApi.RestApiApplicationTests No active profile set, falling back to 1 default profile: "default"
+[2022-11-18 09:35:35.929] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-18 09:35:35.976] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+[2022-11-18 09:35:36.577] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-18 09:35:36.625] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-18 09:35:36.772] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-18 09:35:36.971] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-11-18 09:35:36.983] [WARN ] [main] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+[2022-11-18 09:35:37.289] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-11-18 09:35:37.325] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[2022-11-18 09:35:38.383] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-18 09:35:38.391] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 09:35:39.031] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-18 09:35:39.456] [WARN ] [main] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2022-11-18 09:35:39.625] [INFO ] [main] com.kh.RestApi.RestApiApplicationTests Started RestApiApplicationTests in 4.826 seconds (JVM running for 6.039)
+[2022-11-18 09:35:39.737] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 09:35:39.739] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-11-18 09:35:39.749] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-11-18 10:32:28.047] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest Starting MemberRepositoryTest using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 39668 (started by user1 in D:\김도연\Java\Spring Boot\RestApi)
+[2022-11-18 10:32:28.048] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest No active profile set, falling back to 1 default profile: "default"
+[2022-11-18 10:32:28.597] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-18 10:32:28.644] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+[2022-11-18 10:32:29.202] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-18 10:32:29.247] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-18 10:32:29.386] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-18 10:32:29.568] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-11-18 10:32:29.577] [WARN ] [main] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+[2022-11-18 10:32:29.817] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-11-18 10:32:29.847] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[2022-11-18 10:32:30.899] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-18 10:32:30.907] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 10:32:31.527] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-18 10:32:31.919] [WARN ] [main] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2022-11-18 10:32:32.078] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest Started MemberRepositoryTest in 4.381 seconds (JVM running for 5.419)
+[2022-11-18 10:32:32.319] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 10:32:32.321] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-11-18 10:32:32.330] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.
+[2022-11-18 10:37:23.270] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest Starting MemberRepositoryTest using Java 11.0.15 on DESKTOP-RRUUPU9 with PID 27280 (started by user1 in D:\김도연\Java\Spring Boot\RestApi)
+[2022-11-18 10:37:23.271] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest No active profile set, falling back to 1 default profile: "default"
+[2022-11-18 10:37:23.832] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2022-11-18 10:37:23.877] [INFO ] [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+[2022-11-18 10:37:24.466] [INFO ] [main] org.hibernate.jpa.internal.util.LogHelper HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-11-18 10:37:24.515] [INFO ] [main] org.hibernate.Version HHH000412: Hibernate ORM core version 5.6.12.Final
+[2022-11-18 10:37:24.661] [INFO ] [main] org.hibernate.annotations.common.Version HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-11-18 10:37:24.847] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Starting...
+[2022-11-18 10:37:24.856] [WARN ] [main] com.zaxxer.hikari.util.DriverDataSource Registered driver with driverClassName=oracle.jdbc.driver.OracleDriver was not found, trying direct instantiation.
+[2022-11-18 10:37:25.093] [INFO ] [main] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Start completed.
+[2022-11-18 10:37:25.123] [INFO ] [main] org.hibernate.dialect.Dialect HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+[2022-11-18 10:37:25.833] [INFO ] [main] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-11-18 10:37:25.840] [INFO ] [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 10:37:26.419] [WARN ] [main] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2022-11-18 10:37:26.777] [WARN ] [main] org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+[2022-11-18 10:37:26.937] [INFO ] [main] com.kh.RestApi.dao.MemberRepositoryTest Started MemberRepositoryTest in 4.016 seconds (JVM running for 5.084)
+[2022-11-18 10:37:27.123] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=1, userId=doyeon9111, pwd=love1234, name=도라에몽1, email=1162004@naver.com, join=2022-11-18T10:37:27.035286300)
+[2022-11-18 10:37:27.125] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=2, userId=doyeon9112, pwd=love1234, name=도라에몽2, email=1162004@naver.com, join=2022-11-18T10:37:27.123051500)
+[2022-11-18 10:37:27.128] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=3, userId=doyeon9113, pwd=love1234, name=도라에몽3, email=1162004@naver.com, join=2022-11-18T10:37:27.126043700)
+[2022-11-18 10:37:27.131] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=4, userId=doyeon9114, pwd=love1234, name=도라에몽4, email=1162004@naver.com, join=2022-11-18T10:37:27.128038800)
+[2022-11-18 10:37:27.134] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=5, userId=doyeon9115, pwd=love1234, name=도라에몽5, email=1162004@naver.com, join=2022-11-18T10:37:27.131031100)
+[2022-11-18 10:37:27.137] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=6, userId=doyeon9116, pwd=love1234, name=도라에몽6, email=1162004@naver.com, join=2022-11-18T10:37:27.134023)
+[2022-11-18 10:37:27.140] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=7, userId=doyeon9117, pwd=love1234, name=도라에몽7, email=1162004@naver.com, join=2022-11-18T10:37:27.137014800)
+[2022-11-18 10:37:27.142] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=8, userId=doyeon9118, pwd=love1234, name=도라에몽8, email=1162004@naver.com, join=2022-11-18T10:37:27.140006700)
+[2022-11-18 10:37:27.144] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=9, userId=doyeon9119, pwd=love1234, name=도라에몽9, email=1162004@naver.com, join=2022-11-18T10:37:27.142001300)
+[2022-11-18 10:37:27.146] [WARN ] [main] com.kh.RestApi.dao.MemberRepositoryTest MemberInfo(id=10, userId=doyeon91110, pwd=love1234, name=도라에몽10, email=1162004@naver.com, join=2022-11-18T10:37:27.144993400)
+[2022-11-18 10:37:27.161] [INFO ] [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-11-18 10:37:27.163] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown initiated...
+[2022-11-18 10:37:27.174] [INFO ] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource HikariPool-1 - Shutdown completed.

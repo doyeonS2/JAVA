@@ -1,70 +1,42 @@
 package com.kh.RestApi.controller;
 import com.kh.RestApi.service.MemberService;
-import com.kh.RestApi.vo.MemberVO;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import com.kh.RestApi.vo.MemberDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
-@RestController
+@RestController // 요청에 대한 응답을 해줌 // 뷰...단으로 날림? MVC?
 public class MemberController {
-    private final Logger LOGGER = LoggerFactory.getLogger(this.getClass().getSimpleName()); // 로그 찍을 때 sout 대신 이걸로 쓰기!
-    // service 로직 연결
+    // Service 로직 연결
     private MemberService memberService;
+
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
     }
 
-    @GetMapping("/GetMemberParam")
-    public ResponseEntity <List<MemberVO>> memberList(@RequestParam String id) {
-        LOGGER.info("회원 조회 아이디 : " + id);
-        List<MemberVO> list = memberService.getMemberList(id);
-
-            return new ResponseEntity<>(list, HttpStatus.OK);
-    }
-    @PostMapping("/Login")
-    public Map<String, String> memberLogin(@RequestBody Map<String, String> loginData) {
-        String getId = loginData.get("id");
-        String getPwd = loginData.get("pwd");
-        //System.out.println("Login Controller Call !!!!");
-        LOGGER.error("Login Controller Call !!!!");
-        LOGGER.warn("Login Controller Call !!!!");
-        LOGGER.info("Login Controller Call !!!!");
-        LOGGER.debug("Login Controller Call !!!!");
-        LOGGER.trace("Login Controller Call !!!!");
-
-//        MemberDAO dao = new MemberDAO();
-//        boolean isReg = dao.loginCheck(getId, getPwd);
-        Map<String, String> map = new HashMap<>();
-//        if(isReg) map.put("result", "OK");
-//        else map.put("result", "NOK");
-        return map;
-    }
-    @PostMapping("MemberCheck")
-    public ResponseEntity<Map<String, String>> memberCheck(@RequestBody Map<String, String> chkData) {
-        String getId = chkData.get("id");
-
-        Map<String, String> map = new HashMap<>();
-            return new ResponseEntity(map, HttpStatus.OK);
+    // 전체 회원 조회
+    @GetMapping("/GetMember/list")
+    public ResponseEntity<List<MemberDTO>> memberlist() { // 요청이 들어오면 서블릿에서 memberlist 불러줌 // 전체 조회라서 입력 파라미터 값이 없어서 memberlist()로만 불러줌
+        List<MemberDTO> list = memberService.getMemberList();
+        return new ResponseEntity(list, HttpStatus.OK); // 안에 값을 넣어줘야 하기 때문에 new 생성 // OK = 200번
     }
 
-    // 조회 -> GET 방식
-    // 어떤 값을 설정하는 등.. 로그인 -> POST 방식
+    // 회원가입 만들기
     @PostMapping("/RegMember")
-    public ResponseEntity<Map<String, String>> memberRegister(@RequestBody Map<String, String> regData) {
-        // 가입 정보를 regData에 담겠다
-        String getId = regData.get("id");
-        String getPwd = regData.get("pwd");
-        String getName = regData.get("name");
-        String getMail = regData.get("mail");
-
-        Map<String, String> map = new HashMap<>();
-            return new ResponseEntity(map, HttpStatus.OK);
+    public ResponseEntity<Boolean> registerMember(@RequestBody Map<String, String> regData) { // Boolean 왜 대문자? 객체형을 넣어줘야해서...(?)
+        String userId = regData.get("user");
+        String pwd = regData.get("pwd");
+        String name = regData.get("name");
+        String mail = regData.get("mail");
+        boolean result = memberService.regMember(userId, pwd, name, mail);
+        if(result) {
+            return new ResponseEntity(true, HttpStatus.OK);
+        } else {
+            return new ResponseEntity(false, HttpStatus.BAD_REQUEST);
+        }
     }
 }
