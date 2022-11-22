@@ -47,7 +47,6 @@ public class MemberService {
             memberDTOS.add(memberDTO);
         }
         return memberDTOS;
-
     }
 
 
