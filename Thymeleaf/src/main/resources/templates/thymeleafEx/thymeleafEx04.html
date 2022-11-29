@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      table {
+        border: 1px solid #ccc;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 2px;
+      }
+      th {
+        background-color: lightPink;
+      }
+    </style>
+</head>
+<body>
+<h1>상품 리스트 출력 예제</h1>
+<table>
+  <tr>
+    <th>순번</th>
+    <th>상품명</th>
+    <th>상품설명</th>
+    <th>가격</th>
+    <th>상품등록일</th>
+  </tr>
+  <tr th:each="itemDto, status: ${itemDtoList}"> <!--타임리프 문법-->
+<!--    <td th:if="${status.even}" th:text="짝수"></td> &lt;!&ndash;짝수냐?&ndash;&gt;-->
+<!--    <td th:unless="${status.even}" th:text="홀수"></td> &lt;!&ndash;짝수가 아니냐?&ndash;&gt;-->
+<!--    <td th:if="${status.odd}" th:text="홀수"></td>-->
+    <td th:switch="${status.even}">
+      <span th:case="true">짝수</span>
+      <span th:case="false">홀수</span>
+    </td>
+    <td th:text="${itemDto.getItemName}"></td> <!--각각의 필드값-->
+    <td th:text="${itemDto.getItemDetail}"></td>
+    <td th:text="${itemDto.getPrice}"></td>
+    <td th:text="${itemDto.getRegTime}"></td>
+  </tr>
+</table>
+</body>
+</html>

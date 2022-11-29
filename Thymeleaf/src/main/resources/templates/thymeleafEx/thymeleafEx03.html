@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      table {
+        border: 1px solid #ccc;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 2px;
+      }
+      th {
+        background-color: bisque;
+      }
+    </style>
+</head>
+<body>
+    <h1>상품 리스트 출력 예제</h1>
+    <table>
+        <tr>
+            <th>순번</th>
+            <th>상품명</th>
+            <th>상품설명</th>
+            <th>가격</th>
+            <th>상품등록일</th>
+        </tr>
+        <tr th:each="itemDto, status: ${itemDtoList}"> <!--타임리프 문법-->
+            <td th:text="${status.index}"></td>
+            <td th:text="${itemDto.getItemName}"></td> <!--각각의 필드값-->
+            <td th:text="${itemDto.getItemDetail}"></td>
+            <td th:text="${itemDto.getPrice}"></td>
+            <td th:text="${itemDto.getRegTime}"></td>
+        </tr>
+    </table>
+</body>
+</html>
