@@ -8,12 +8,15 @@ import java.util.List;
 public class CompanyController {
     @Autowired // 의존성 주입
     private CompanyMapper companyMapper;
+    @Autowired
+    private CompanyService companyService;
+
     @PostMapping("")
     public int post(@RequestBody Company company) {
         return companyMapper.insert(company); // 들어온 값을 insert 해주고 바로 return
     }
     @GetMapping("")
     public List<Company> getAll() {
-        return companyMapper.getAll();
+        return companyService.getAll();
     }
 }
